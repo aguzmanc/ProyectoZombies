@@ -10,6 +10,9 @@ public class Enemigo : MonoBehaviour
 	public int NumeroLados = 5;
 	public bool direccion = true;
 
+	public bool _siguiendo = false;
+	public Transform _objetivo;
+
 	void Start () 
 	{
 		_tiempoRestante = TiempoPatrulla;
@@ -17,6 +20,15 @@ public class Enemigo : MonoBehaviour
 
 	void Update () 
 	{
+		if (!_siguiendo) {
+			Patrullar();
+		} else {
+			Seguir();
+		}
+		
+	}
+
+	void Patrullar() {
 		_tiempoRestante = _tiempoRestante - Time.deltaTime;
 		if (_tiempoRestante <= 0) {
 			_tiempoRestante = TiempoPatrulla;
@@ -24,5 +36,19 @@ public class Enemigo : MonoBehaviour
 		}
 
 		transform.Translate (0, 0,VelocidadAvance);
+	}
+
+	void Seguir() {
+		transform.LookAt (_objetivo.position);
+		transform.Translate (0, 0, VelocidadAvance);
+	}
+
+	public void EmpezarASeguir(Transform t) {
+		_siguiendo = true;
+		_objetivo = t;
+	}
+
+	public void PararDeSeguir() {
+		_siguiendo = false;
 	}
 }

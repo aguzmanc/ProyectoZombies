@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4478624145143486}
+  - component: {fileID: 65018661334467166}
   m_Layer: 0
   m_Name: mesa para 4
   m_TagString: Untagged
@@ -623,8 +624,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1004856394867124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -21.17472, y: 0.8080863, z: 12.380304}
+  m_LocalScale: {x: 2.0999331, y: 2.0999331, z: 2.0999331}
   m_Children:
   - {fileID: 4727135336319882}
   - {fileID: 4839756277854116}
@@ -1545,6 +1546,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65018661334467166
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1004856394867124}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8006394, y: 1.8960011, z: 1.7057828}
+  m_Center: {x: 0.0068478268, y: 0.44800034, z: -0.088835664}
 --- !u!65 &65054487658765368
 BoxCollider:
   m_ObjectHideFlags: 1
